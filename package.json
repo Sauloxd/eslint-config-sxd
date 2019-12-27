@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sxd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Always configuring lints sucks, and airbnb lint also sucks",
   "main": "index.js",
   "author": "sauloxd",
