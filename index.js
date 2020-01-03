@@ -15,7 +15,8 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
   ],
   rules: {
     // Stylistics
@@ -30,7 +31,7 @@ module.exports = {
     'brace-style': ["error", "1tbs", { "allowSingleLine": true }],
     'eol-last': ["error", "always"],
     'func-call-spacing': ["error", "never"],
-    'implicit-arrow-linebreak': ["error", "below"],
+    // 'implicit-arrow-linebreak': ["error", "below"],
     'jsx-quotes': ["error", "prefer-double"],
     'key-spacing': ["error", { "beforeColon": false }],
     'keyword-spacing': ["error", { "before": true }],
@@ -44,6 +45,18 @@ module.exports = {
     'one-var': ["error", "never"],
 
     // @typescript-eslint
-    '@typescript-eslint/explicit-function-return-type': 'off'
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
+
+    // React specific
+    'react/prop-types': 'off',
+    'react/jsx-wrap-multilines': ['error', {
+      declaration: 'parens-new-line',
+      return: "parens-new-line",
+      arrow: "parens-new-line"
+    }],
+    "react/jsx-indent": ['error', 2, {checkAttributes: true, indentLogicalExpressions: true}],
+    "react/jsx-closing-tag-location": ['error'],
+    "react/jsx-no-useless-fragment": ['error'],
   }
 };
