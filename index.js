@@ -11,7 +11,10 @@ module.exports = {
       jsx: true
     },
   },
-  plugins: ["@typescript-eslint"],
+  plugins: [
+    "@typescript-eslint",
+    "react-hooks"
+  ],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
