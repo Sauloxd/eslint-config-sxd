@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sxd",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "I never want to duplicate my esling config ever again, please god help me",
   "main": "index.js",
   "author": "sauloxd",

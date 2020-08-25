@@ -21,6 +21,11 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended'
   ],
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
   rules: {
     // Stylistics
     quotes: ['error', 'single'],
@@ -50,6 +55,7 @@ module.exports = {
     // @typescript-eslint
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
 
     // React specific
     'react/prop-types': 'off',
