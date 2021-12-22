@@ -11,7 +11,7 @@ type Comment = {
   createdAt: Date;
 };
 
-type Commentable<T = Record<any, any>> = T & {
+type Commentable<T = Record<string, string>> = T & {
   comments: Comment[];
   setComment: (message: string) => void;
 };
