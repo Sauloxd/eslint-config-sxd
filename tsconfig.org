@@ -17,7 +17,7 @@
 *** target
 When compiling, target to a more generic JS
 #+begin_src :tangle
-    "target": "v6",
+    "target": "es6",
 #+end_src
 *** allowSyntheticDefaultImports
 #+begin_src :tangle
@@ -47,6 +47,11 @@ alwaysStrict, strictNullChecks, strictBindCallApply, strictFunctionTypes, strict
 *** jsx
 #+begin_src :tangle
     "jsx": "react",
+#+end_src
+*** noEmit
+run ~yarn tsc~ just to check types and run in CI
+#+begin_src :tangle
+    "noEmit": true,
 #+end_src
 *** allowJS
 Now you can import JS inside a TS without compiler complaining
