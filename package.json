@@ -8,8 +8,8 @@
   "scripts": {
     "test": "eslint --config index.js index.js"
   },
-  "files": "index.js",
-  "devDependencies": {
+  "files": ["index.js"],
+  "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
     "eslint": "^8.5.0",
