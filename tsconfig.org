@@ -1,0 +1,63 @@
+:PROPERTIES:
+:header-args: :padline no :tangle tsconfig.json
+:END:
+# M-x org-babel-tangle
+# To start remember to C-c C-c in header-args
+
+* TS configuration
+** start
+#+begin_src :tangle
+{
+#+end_src
+** compiler options
+*** start
+#+begin_src :tangle
+  "compilerOptions": {
+#+end_src
+*** target
+When compiling, target to a more generic JS
+#+begin_src :tangle
+    "target": "v6",
+#+end_src
+*** allowSyntheticDefaultImports
+#+begin_src :tangle
+    "allowSyntheticDefaultImports": true,
+#+end_src
+This allows for
+#+begin_src javascript :tangle no
+import React from 'react';
+// instead of
+import * as React from 'react';
+#+end_src
+even though there is no export default in import statement
+*** module
+Sets how programs will consume the compiled version.
+If UMD -> will be in the UMD interface
+if AMD -> ~define([], function(){})~ format
+etc.
+#+begin_src :tangle
+    "module": "esnext",
+#+end_src
+*** strict
+Enables:
+alwaysStrict, strictNullChecks, strictBindCallApply, strictFunctionTypes, strictPropertyInitialization, noImplicitAny, noImplicitThis, useUnknownInCatchVariabl
+#+begin_src :tangle
+    "strict": true,
+#+end_src
+*** jsx
+#+begin_src :tangle
+    "jsx": "react",
+#+end_src
+*** allowJS
+Now you can import JS inside a TS without compiler complaining
+#+begin_src :tangle
+    "allowJs": true
+#+end_src
+*** end
+#+begin_src :tangle
+  }
+#+end_src
+** end
+#+begin_src :tangle
+}
+#+end_src
